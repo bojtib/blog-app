@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import BlogPosts from "./BlogPosts";
 import {PostDTO} from "./api/models/PostDTO";
+import BlogPostForm from "./BlogPostForm";
 
 function App() {
 
@@ -45,6 +46,8 @@ function App() {
                 {yourName + "'s Personal Travel Blog"}
             </header>
             <body className="App-body">
+            <BlogPostForm onPostSubmit={() => {
+            }}/>
             <BlogPosts blogPosts={blogPosts.reverse()}/>
             </body>
         </div>

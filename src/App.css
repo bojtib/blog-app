@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 20vh; /* TODO  explain */
+  min-height: 20vh; /* https://www.w3schools.com/cssref/css_units.php */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +27,7 @@
 .App-body {
   background-color: white;
   margin: 2vh;
-  min-height: 80vh; /* TODO  explain */
+  min-height: 80vh; /* https://www.w3schools.com/cssref/css_units.php */
   display: flex;
   flex-direction: column;
   text-align: left;
