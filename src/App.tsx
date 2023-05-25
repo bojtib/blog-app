@@ -8,7 +8,7 @@ function App() {
 
     const yourName = "Bence";
 
-    const blogPosts: PostDTO[] = [{
+    const [blogPosts, setBlogPosts] = React.useState<PostDTO[]>( [{
         id: "1",
         title: "Trip to Luxembourg",
         text: "Well, that was a surprise!\n\n" +
@@ -38,7 +38,11 @@ function App() {
         title: "Trip to Seattle",
         text: "Next week I will visit Seattle, follow my blog to get the latest updates about my trip.",
         author: yourName
-    }];
+    }]);
+
+    const onFormSubmit = (post: PostDTO) => {
+        setBlogPosts([post, ...blogPosts]);
+    }
 
     return (
         <div className="App">
@@ -46,9 +50,8 @@ function App() {
                 {yourName + "'s Personal Travel Blog"}
             </header>
             <body className="App-body">
-            <BlogPostForm onPostSubmit={() => {
-            }}/>
-            <BlogPosts blogPosts={blogPosts.reverse()}/>
+            <BlogPostForm onPostSubmit={onFormSubmit}/>
+            <BlogPosts blogPosts={blogPosts}/>
             </body>
         </div>
     );
