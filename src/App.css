@@ -25,10 +25,12 @@
 }
 
 .App-body {
-  background-color: #a6e5df;
+  background-color: white;
+  margin: 2vh;
   min-height: 80vh; /* TODO  explain */
   display: flex;
   flex-direction: column;
+  text-align: left;
   align-items: center;
   justify-content: start;
   font-size: calc(10px + 1vmin);
